@@ -1,3 +1,4 @@
+import { HomePage } from "./page_objects/home.page";
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('openHomePage', () => {
+    cy.visit('/');
+});
+
+Cypress.Commands.add('navigateFromHomeToPage', (sectionName) => {
+    cy.visit('/');
+    cy.contains(HomePage.elementsCard, sectionName).should('be.visible').click({ force: true });
+    cy.url().should('include', `/${sectionName.toLowerCase()}`);
+});
+
+Cypress.Commands.add("selectSidebarItem", (itemName) => {
+    cy.contains('li', itemName).should('be.visible').click();
+});
