@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://demoqa.com',
-    specPattern: 'cypress/integration/**/*.spec.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/e2e/**/*.spec.{js,jsx,ts,tsx}',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
@@ -11,7 +11,7 @@ module.exports = defineConfig({
   viewportWidth: 1920,
   viewportHeight: 1080,
   retries: {
-    runMode: 2,
+    runMode: 1,
     openMode: 1,
   }
 });
