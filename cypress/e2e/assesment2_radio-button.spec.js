@@ -1,7 +1,7 @@
 import { ElementsPage } from "../support/page_objects/elements.page";
 import { RadioButtonPage } from "../support/page_objects/radio-button.page";
 
-describe('Buttons scenarios', () => {
+describe('Radio Buttons scenarios', () => {
     const elementsPage = new ElementsPage();
     const radioButtonPage = new RadioButtonPage();
 
@@ -16,7 +16,7 @@ describe('Buttons scenarios', () => {
         radioButtonPage.elements.message().should('not.exist');
     });
         
-    describe('Buttons - Positive Testing', () => {
+    describe('Radio Buttons - Positive Testing', () => {
         it('Select Yes radio button and message should be displayed', () => {
             radioButtonPage.elements.yesRadioBtn().should('not.be.checked');
             radioButtonPage.elements.yesLabel().should('be.visible').click();
@@ -34,7 +34,7 @@ describe('Buttons scenarios', () => {
         });
     });
 
-    describe('Buttons - Negative Testing', () => {
+    describe('Radio Buttons - Negative Testing', () => {
         it('Should not be able to select "No" radio button', () => {
             radioButtonPage.elements.noLabel().click({ force: true });
             radioButtonPage.elements.noRadioBtn().should('be.disabled').and('not.be.checked');

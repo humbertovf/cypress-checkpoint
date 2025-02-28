@@ -1,7 +1,7 @@
 import { ElementsPage } from "../support/page_objects/elements.page";
 import { TextboxPage } from "../support/page_objects/textbox.page";
 
-describe('Buttons scenarios', () => {
+describe('Textbox scenarios', () => {
     const elementsPage = new ElementsPage();
     const textboxPage = new TextboxPage();
 
