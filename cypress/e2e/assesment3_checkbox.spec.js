@@ -1,7 +1,7 @@
 import { ElementsPage } from "../support/page_objects/elements.page";
 import { CheckboxPage } from "../support/page_objects/checkbox.page";
 
-describe('Buttons scenarios', () => {
+describe('Checkbox scenarios', () => {
     const elementsPage = new ElementsPage();
     const checkboxPage = new CheckboxPage();
 
@@ -11,7 +11,7 @@ describe('Buttons scenarios', () => {
         cy.url().should('include', `/checkbox`);
     });
         
-    describe('Buttons - Positive Testing', () => {
+    describe('Checkbox - Positive Testing', () => {
         it('Select checkboxes individually', () => {
             checkboxPage.elements.toggle(checkboxPage.options.home).click();
             checkboxPage.elements.checkboxLabel(checkboxPage.options.desktop).click();
@@ -30,7 +30,7 @@ describe('Buttons scenarios', () => {
         });
     });
 
-    describe('Buttons - Negative Testing', () => {
+    describe('Checkbox - Negative Testing', () => {
         it('Validate elements not selected', () => {
             checkboxPage.elements.toggle(checkboxPage.options.home).click();
             checkboxPage.elements.checkboxLabel(checkboxPage.options.desktop).click();
