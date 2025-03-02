@@ -8,5 +8,6 @@ export class ElementsPage {
         brokenLinks: () => cy.get('span:contains("Broken Links - Images")').eq(1),
         uploadAndDownload: () => cy.get('span:contains("Upload and Download")'),
         uploadAndDownload: () => cy.get('span:contains("Dynamic Properties")'),
+        selectMenu: () => cy.get('span:contains("Select Menu")')
     };
 }
