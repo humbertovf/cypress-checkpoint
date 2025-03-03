@@ -38,3 +38,9 @@ Cypress.Commands.add('navigateFromHomeToPage', (sectionName) => {
 Cypress.Commands.add("selectSidebarItem", (itemName) => {
     cy.contains('li', itemName).should('be.visible').click();
 });
+
+Cypress.Commands.add('freezeUi', () => {
+    cy.window().then(win => {
+        win.addEventListener('blur', e => e.stopImmediatePropagation(), true);
+    });
+});
