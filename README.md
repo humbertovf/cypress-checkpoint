@@ -11,6 +11,7 @@ Automated test suite for web application testing using Cypress.
 ## 🚀 Getting Started
 
 ### Project Structure
+```mermaid
 cypress/
 ├── support/          # Custom commands and utilities
 ├── page_objects/     # Page object model classes
@@ -18,6 +19,7 @@ cypress/
 └── downloads/        # Auto-generated test downloads
 config/
 └── cypress.config.js # Cypress configuration
+```
 
 ### 1. Clone the Repository
 ```bash
